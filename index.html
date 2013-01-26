@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Triple Dare - Knuckleodeon</title>  
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<link rel="stylesheet" href="style.css" media="all" />
+		<!--iPhone viewport settings-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<!--simple script, enables the HTML5 elements that I use in IE8 and below, also some styling fixes-->
+		<!--[if lt IE 9]>	
+			<script>
+				document.createElement("header"); document.createElement("nav"); document.createElement("section"); document.createElement("footer");
+			</script>
+			<style>
+				#prizes li {width: 44%; margin-right: 6%;}
+				#obstacles .section-head {margin-left: 345px;text-indent: -345px;}
+				#prizes .section-head {margin-left: 245px;text-indent: -245px;}
+				#be-a-contestant .section-head {margin-left: 525px;text-indent: -525px;}
+			</style>
+		<![endif]-->
+		<!--[if IE 6]>	
+			<style>
+				body {background: #80c1d6;}
+				.orange-bg {background: #fe6638;}
+				.green-bg {background: #80b238;}
+				/*disable the most ugly looking BG images (transparent PNG does not work)*/
+				header, .obstacle-description div, .section-head, .license-fineprint {background: none !important;margin-left: none !important;}
+			</style>
+		<![endif]-->
+	</head>
+	<body>
+		<header id="top">
+			<nav class="clearfix">
+				<ul>
+					<li><a href="#obstacles">Obstacles</a></li>
+					<li><a href="#prizes">Prizes</a></li>
+					<li><a href="#be-a-contestant">Be a Contestant</a></li>
+					<li><a href="#top">Back to Top</a></li>
+				</ul>
+			</nav>
+				
+			<h1>Triple Dare</h1>
+			<h2 title="Now with 20% more Chuck Norris!">The Web's messiest challenge!</h2>
+			<p>Airing Thursdays on the Knuckleodeon Network&#8482;</p>
+		</header>
+			
+		<section id="obstacles" class="orange-bg clearfix">
+			<h2 class="section-head">Obstacles</h2>
+				
+			<ul class="obstacle-list clearfix">
+				<li class="the-tank current"><a href="#the-tank">The Tank</a></li>
+				<li class="sundae-slide"><a href="#sundae-slide">Sundae Slide</a></li>
+				<li class="human-hamster-wheel"><a href="#human-hamster-wheel">Human Hamster Wheel</a></li>
+				<li class="down-the-hatch"><a href="#down-the-hatch">Down the Hatch</a></li>
+				<li class="pick-it"><a href="#pick-it">Pick It!</a></li>
+				<li class="the-wringer"><a href="#the-wringer">The Wringer</a></li>
+			</ul>
+				
+			<div class="obstacle-description clearfix">
+				<div id="the-tank" class="current">
+					<h2>The Tank</h2>
+					<p>This might look like a harmless swimming pool... Just watch out for those piranhas.</p>
+				</div>
+				<div id="sundae-slide">
+					<h2>Sundae Slide</h2>
+					<p>A swirling adventure... Would you like a cherry on top?</p>
+				</div>
+				<div id="human-hamster-wheel">
+					<h2>Human Hamster Wheel</h2>
+					<p>Mankind's natural habitat... Perfect for torture!</p>
+				</div>
+				<div id="down-the-hatch">
+					<h2>Down the Hatch</h2>
+					<p>6FT Slide Covered in Gunk</p>
+				</div>
+				<div id="pick-it">
+					<h2>Pick It!</h2>
+					<p>America's second favorite pastime. Right after watching baseball!</p>
+				</div>
+				<div id="the-wringer">
+					<h2>The Wringer</h2>
+					<p>Just don't look at it...</p>
+				</div>					
+			</div>				
+		</section>
+			
+		<section id="prizes" class="green-bg clearfix">
+			<h2 class="section-head">Prizes</h2>
+			<ul class="clearfix">
+				<li class="space-camp">A Trip to Space Camp!</li>
+				<li class="skateboard">A Nash Skateboard!</li>
+				<li class="keyboard">A Casio Rapman Keyboard!</li>
+				<li class="tv-vcr-combo">A 13 inch TV/VCR Combo!</li>					
+			</ul>
+		</section>
+			
+		<section id="be-a-contestant" class="blue-bg clearfix">
+			<h2 class="section-head">Be A Contestant</h2>
+			<form method="post" action="form-handler.fancyfileextension">
+				<input type="text" placeholder="Your Name" name="name" required>
+				<input type="email" placeholder="Email Address" name="email" required>
+				<input type="text" placeholder="Team Name" name="team-name">
+				<select name="team-color">
+					<option>Team Color</option>
+					<option>White</option>
+					<option>Unicorn Pink!</option>
+					<option>Black</option>
+					<option>Red</option>
+				</select>
+				<select name="gender">
+					<option>Gender</option>
+					<option>Male</option>
+					<option>Female</option>
+					<option>Other</option>
+				</select>
+				<input type="url" placeholder="Profile Photo URL" name="profile-photo-url" required>
+				<input type="submit" value="Submit Entry!">
+			</form>
+				
+			<div class="countdown">
+				<h2 class="count">60</h2>
+				<p>The clock is ticking!</p>
+			</div>
+		</section>		
+
+		<footer>
+			<h2 class="kn-logo">KN</h2>
+			<p class="kn-title">The Knucklelodeon Network</p>
+					
+			<p class="fineprint">
+				The Knucklelodeon Network is not affiliated with Nickelodeon, nor is it an actual television network.
+				Triple Dare contestents consent to potential physical bodily harm, like being burried alive by a giant waffle.
+			</p>
+			
+			<h2 class="visit">Visit Our Studios</h2>
+			<p class="address">
+				11 Slime Time Way Sacrameno, CA 94203 329 Grunk Road Jacksonville, FL 32099
+			</p>
+					
+			<p class="license-fineprint">
+				This design is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License
+			</p>
+				
+		</footer>				
+		<!--javascript-->
+		<script src="js/jquery-1.6.4.min.js"></script>
+		<script src="js/script.js"></script>		
+		
+		<!--adds support for placeholder text in IE (not even IE10 supports placeholder!)-->
+		<!--[if IE]>
+		<script>
+			//select all the text inputs on the page (including the new HTML5 ones [email, url])
+			$('input[placeholder]').each(function () {
+				//create a var with the text equaling the placeholder attribute
+				var text = $(this).attr("placeholder");
+				//set the value of the input to the text var
+				$(this).val(text);
+				$(this).bind('blur', function(){ $(this).val(text); });
+				$(this).bind('focus', function(){ $(this).val(""); });
+			});		
+			$('textarea[placeholder]').each(function () {
+				//create a var with the text equaling the placeholder attribute
+				var text = $(this).attr("placeholder");
+				//set the value of the input to the text var
+				$(this).val(text);
+				$(this).bind('blur', function(){ $(this).val(text); });
+				$(this).bind('focus', function(){ $(this).val(""); });
+			});			
+		</script>
+		<![endif]-->
+	</body>
+</html>

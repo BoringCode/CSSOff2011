@@ -1,0 +1,725 @@
+/*blue: #80c1d6 orange: #fe6638 green: #80b238 yellow: #EEF13F*/
+
+/*fonts:*/
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('fonts/open-sans/OpenSans-Regular-webfont.eot');
+    src: url('fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url('fonts/open-sans/OpenSans-Semibold-webfont.eot');
+    src: url('fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open-sans/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('fonts/open-sans/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('fonts/open-sans/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'KomikaTitlePaint';
+    src: url('fonts/komika-title/komikatitle-paint-webfont.eot');
+    src: url('fonts/komika-title/komikatitle-paint-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/komika-title/komikatitle-paint-webfont.woff') format('woff'),
+         url('fonts/komika-title/komikatitle-paint-webfont.ttf') format('truetype'),
+         url('fonts/komika-title/komikatitle-paint-webfont.svg#fonts/komika-title/komikatitle-PaintRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'DigitaldreamFatRegular';
+    src: url('fonts/digital-dream/digitaldreamfat-webfont.eot');
+    src: url('fonts/digital-dream/digitaldreamfat-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/digital-dream/digitaldreamfat-webfont.woff') format('woff'),
+         url('fonts/digital-dream/digitaldreamfat-webfont.ttf') format('truetype'),
+         url('fonts/digital-dream/digitaldreamfat-webfont.svg#DigitaldreamFatRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*reset*/
+* {margin: 0;padding:0;}
+
+/*Force IE to display the HTML5 elments as block elements, also adds some transitions*/
+header, nav, section, footer {
+	display: block;
+	-webkit-transition: all 400ms ease-in-out;
+	-moz-transition: all 400ms ease-in-out;
+	-o-transition: all 400ms ease-in-out;
+	transition: all 400ms ease-in-out;
+}
+
+/*clearfix*/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0;
+}
+* html .clearfix {zoom: 1;} /* IE6 */
+*:first-child+html .clearfix {zoom: 1;} /* IE7 */
+
+/*set a blue background + texture for the body*/
+body {
+	background: url('images/blue-texture.png') #80c1d6 repeat;
+}
+
+/*selection*/
+::selection {background: #EEF13F;color:#0F2830;}::-moz-selection {background: #EEF13F;color:#0F2830;}
+
+/*universal styles for each section, adds a space for the nav to go over*/
+section, footer {
+	padding-top: 40px;
+	position: relative;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 90px;
+}
+/*create the border that is on top of each section*/
+section:before {
+	content: "";
+	position: absolute;
+	top: -7px;
+	left: 0;
+	width: 100%;
+	height: 14px;
+	background-color: black;
+	opacity: 0.06;
+	/*should work?*/
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+	z-index: 90;
+}
+	#obstacles:before {
+		height: 8px;
+		top: 0;
+	}
+
+/*settings for background colors on sections*/
+.orange-bg {
+	background: url('images/orange-texture.png') #fe6638 repeat;
+}.green-bg {
+	background: url('images/green-texture.png') #80b238 repeat;
+}
+
+/*first the header! Set the background image and min-height*/
+header {
+	text-align: center;
+	background: url('images/header-bg-splatter.png') no-repeat top center;
+	min-height: 705px;
+}
+	nav {
+		/*yes, I know repetive, however this is so IE8 and below will at least have a background color*/
+		background-color: #79B8CC;
+		background-color: rgba(15,40,48, 0.06);
+		font-family: 'OpenSansSemibold';
+		text-transform: uppercase;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+	}
+		nav ul {
+			list-style: none;
+			width: 610px;
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+			margin: auto;
+		}
+			nav li {
+				float: left;
+				margin-left: 20px;
+				margin-right: 20px;
+				-webkit-transition: all 400ms ease-in-out;
+				-moz-transition: all 400ms ease-in-out;
+				-o-transition: all 400ms ease-in-out;
+				transition: all 400ms ease-in-out;
+			}
+				nav li:hover, nav .current {
+					/*yes, I know repetive, however this is so IE8 and below will at least have a background color*/
+					background-color: rgb(8,22,26);
+					background-color: rgba(8,22,26,0.2);
+				}
+				nav a {
+					color: #FEFEFE;
+					text-decoration: none;
+					display: block;
+					font-size: 15px;
+					padding-left: 8px;
+					padding-right: 8px;
+				}
+	/*just some fancy image replacement*/			
+	header h1 {
+		height: 530px;
+		width: 502px;
+		line-height: 530px;
+		text-indent: -9999px;
+		background: url('images/logo.png') no-repeat;
+		margin: auto;
+		overflow: hidden;
+		-webkit-transition: all 400ms ease-in-out;
+		-moz-transition: all 400ms ease-in-out;
+		-o-transition: all 400ms ease-in-out;
+		transition: all 400ms ease-in-out;
+	}
+		/*just for fun*/
+		header h1:hover{
+			-moz-transform: scale(0.8) rotate(-6deg);
+			-webkit-transform: scale(0.8) rotate(-6deg);
+			-o-transform: scale(0.8) rotate(-6deg);
+			-ms-transform: scale(0.8) rotate(-6deg);
+			transform: scale(0.8) rotate(-6deg);
+		}
+	header h2 {
+		font-family: 'KomikaTitlePaint';
+		color: #FE6537;
+		text-shadow: 2px 2px 1px #ffffff;
+		font-size: 48px;
+		letter-spacing: 3px;
+	}
+	header p {
+		font-family: 'OpenSansRegular';
+		color: white;
+		font-size: 22px;
+		letter-spacing: 1px;
+	}
+
+.section-head {
+	font-family: 'KomikaTitlePaint';
+	color: white;
+	font-size: 42px;
+	letter-spacing: 3px;
+	display: block;
+	background-image: url('images/checker-stripe-bg.png');
+	background-repeat: repeat-x;
+	
+	margin-bottom: 55px;
+	text-shadow: 4px 4px 1px rgba(15,40,48, 0.4);
+}
+	/*my hax, BUT much more maintainable then using a seperate image for each header*/
+	#obstacles .section-head	{background-position: 310px 4px;}
+	#prizes .section-head {margin-left: 223px;text-indent: -223px;}
+	#be-a-contestant .section-head {margin-left: 500px;text-indent: -500px;}
+
+	/*obstacle section styling, this starts with the obstacle list*/
+	.obstacle-list {
+		width: 50%;
+		max-width: 465px;
+		float: left;
+		list-style: none;
+	}
+	/*obstacle description, bigger image plus a description of the obstacle*/
+	.obstacle-description {
+		width: 50%;
+		max-width: 465px;
+		float: right;
+	}
+		.obstacle-description div {
+			text-align: center;
+			min-height: 695px;
+			position: relative;
+			background-repeat: no-repeat;
+			background-size: 90% 98%;
+		}
+			/*hide all the divs that are not current will not work in IE8 or below, but it does degrade well enough*/
+			.obstacle-description div:not(.current) {display: none;}
+			/*add background images for all the divs*/
+			.obstacle-description #the-tank {
+				background-image: url('images/obstacles/the-tank-large.png');
+			}.obstacle-description #sundae-slide {
+				background-image: url('images/obstacles/sundae-slide-large.png');
+			}.obstacle-description #human-hamster-wheel {
+				background-image: url('images/obstacles/human-hamster-wheel-large.png');
+			}.obstacle-description #down-the-hatch {
+				background-image: url('images/obstacles/down-the-hatch-large.png');
+			}.obstacle-description #pick-it {
+				background-image: url('images/obstacles/pick-it-large.png');
+			}.obstacle-description #the-wringer {
+				background-image: url('images/obstacles/the-wringer-large.png');
+			}		
+		/*basic styling for the header and description of each obstacle. Tilts them too.*/
+		.obstacle-description h2, .obstacle-description  p {
+			font-family: 'KomikaTitlePaint';
+			color: white;
+			letter-spacing: 3px;
+			text-shadow: 4px 4px 1px rgba(15,40,48, 0.4);
+			-moz-transform: rotate(-4deg);
+			-webkit-transform: rotate(-4deg);
+			-o-transform: rotate(-4deg);
+			-ms-transform: rotate(-4deg);
+			transform: rotate(-4deg);			
+		}.obstacle-description  p {
+			font-size: 18px;
+			line-height: 22px;
+		}.obstacle-description h2 {
+			padding-top: 70px;
+			font-size: 36px;
+			line-height: 40px;
+			margin-bottom: 10px;
+		}
+			#the-wringer h2, #sundae-slide h2, #down-the-hatch h2 {/*slight adjustment*/ padding-top: 90px;}	
+			
+			/*create the green splatter background with no container divs, in theory this is a good idea because now I can position the background anywhere I want in any browser, except IE7 :(*/
+			.obstacle-description div:before {
+				background: url('images/obstacles/green-splatter-bg.png') no-repeat;
+				content: "";
+				height: 206px;
+				width: 236px;
+				position: absolute;
+				top: 35px;
+				left: 50%;
+				margin-left: -120px;
+			}			
+	.obstacle-list li {
+		float: left;
+		background-color: #80B238;
+		margin-right: 16px;
+		margin-bottom: 16px;
+		text-align: center;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px; 
+		background-repeat: no-repeat;
+		-webkit-transition: all 400ms ease-in-out;
+		-moz-transition: all 400ms ease-in-out;
+		-o-transition: all 400ms ease-in-out;
+		transition: all 400ms ease-in-out;
+		/*The reason I only use a sprite here (yes, I know extra HTTP requests can and are bad)? Because I need dynamically sized backgrounds so that mobile will work. I can't do that with a sprite. In the real world I would figure out a better/different way to do this.*/
+		background-image: url("images/obstacles/obstacles-sprite.png");
+	}
+		/*make every second list item have no margin at the right, this keeps them from dropping to another line*/
+		.obstacle-list li:nth-child(even) {margin-right: 0;}
+		.obstacle-list a {
+			display: block;
+			width: 220px;
+			height: 30px;
+			padding-top: 190px;
+			color: white;
+			font-family: 'KomikaTitlePaint';
+			text-decoration: none;
+			font-size: 14px;
+			-webkit-transition: all 400ms ease-in-out;
+			-moz-transition: all 400ms ease-in-out;
+			-o-transition: all 400ms ease-in-out;
+			transition: all 400ms ease-in-out;
+		}		
+		/*specify background position*/
+		.obstacle-list .the-tank {background-position: -10px -10px;}.obstacle-list .sundae-slide {background-position: -250px -10px;}.obstacle-list .human-hamster-wheel {background-position: -490px -10px;}.obstacle-list .down-the-hatch {background-position: -730px -10px;}.obstacle-list .pick-it {background-position: -970px -10px;;}.obstacle-list .the-wringer {background-position: -1210px -10px;}
+		
+		/*hover and current bg color*/
+		.obstacle-list li:hover, .obstacle-list .current {background-color:#EEF13F;}
+			.obstacle-list li:hover a, .obstacle-list .current a {color:#F46034;}
+
+/*on to the prizes section!*/			
+#prizes {
+	padding-bottom: 75px;
+}
+#prizes ul {
+	list-style: none;
+	margin: auto;
+	width: 100%;
+	max-width: 900px;
+}
+	#prizes li {
+		float: left;
+		width: 42%;
+		margin-right: 13%;
+		/*margin in design is 115px (around there), 115px is 13% of 900px*/
+		max-width: 420px;
+		color: white;
+		font-family: 'KomikaTitlePaint';
+		font-size: 16px;
+		text-align: center;
+	}
+		#prizes li:nth-child(even) {margin-right: 0;}
+		#prizes .space-camp {
+			background: url("images/prizes/space-camp.png") no-repeat;
+			background-size: 96% 88%;
+			/*adding padding to the top creates a hole that the background image appears in*/
+			padding-top: 402px;
+		}#prizes .skateboard {
+			background: url("images/prizes/skateboard.png") no-repeat;
+			background-size: 100% 80%;
+			padding-top: 255px;
+			margin-bottom: 180px;
+		}#prizes .keyboard {
+			background: url("images/prizes/keyboard.png") no-repeat;
+			background-size: 100% 80%;
+			padding-top: 230px;
+			margin-top: 20px;
+		}#prizes .tv-vcr-combo {
+			background: url("images/prizes/vcr-tv.png") no-repeat;
+			background-size: 92% 88%;
+			padding-top: 385px;
+			margin-top: -135px;
+		}
+		
+	/*sign up to be squashed by giant waffles, thrown by Chuck Norris. Who wouldn't want to sign up?!?*/	
+	#be-a-contestant form {
+		max-width: 410px;
+		width: 42%;
+		margin-right: 65px;
+		float: left;
+	}
+		/*universal input styling*/
+		#be-a-contestant input[type=text],#be-a-contestant input[type=email],#be-a-contestant input[type=url], #be-a-contestant select {
+			background-color: #FE6336;
+			color: white;
+			border: none;
+			-webkit-border-radius: 6px;
+			-moz-border-radius: 6px;
+			border-radius: 6px; 
+			padding: 15px;
+			margin-bottom: 12px;
+			font-family: 'KomikaTitlePaint';
+			font-size: 16px;
+			-webkit-transition: all 400ms ease-in-out;
+			-moz-transition: all 400ms ease-in-out;
+			-o-transition: all 400ms ease-in-out;
+			transition: all 400ms ease-in-out;
+			position: relative;
+		}		
+			/*getting specific*/
+			#be-a-contestant input[type=text],#be-a-contestant input[type=email],#be-a-contestant input[type=url]{
+				width: 93%;
+			}
+				/*when typing in the text input change the BG color and the text color*/
+				#be-a-contestant input[type=text]:focus, #be-a-contestant input[type=email]:focus, #be-a-contestant input[type=url]:focus, #be-a-contestant select:focus {
+					background-color: #EEF13F;
+					color: #fe6638;
+					/*create a pop effect*/
+					padding: 22px;
+					outline: 0;
+				}
+				/*Firefox is smart and will set the placeholder in the color I set for the input, webkit not so much*/
+				::-webkit-input-placeholder {
+				color: white;
+				}
+			#be-a-contestant select[name=team-color] {width: 220px;margin-right:20px;}
+			#be-a-contestant select[name=gender] {width: 166px;}
+			/*I did not achieve the green dropdown buttons. I decided that I could not do it in every browser without non-semantic elements (and it might get really complicated then)*/		
+		/*submit button*/
+		#be-a-contestant input[type=submit] {
+			display: block;
+			border: none;
+			cursor: pointer;
+			background: url('images/green-splatter.png') no-repeat;
+			height: 155px;
+			width: 250px;
+			margin: auto;
+			margin-top: 40px;
+			font-family: 'KomikaTitlePaint';
+			color: white;
+			font-size: 26px;
+			letter-spacing: 2px;
+			text-shadow: 4px 4px 1px rgba(15,40,48, 0.4);			
+			-moz-transform: rotate(-8deg);
+			-webkit-transform: rotate(-8deg);
+			-o-transform: rotate(-8deg);
+			-ms-transform: rotate(-8deg);
+			transform: rotate(-8deg);				
+		}
+		
+	/*oh yeah countdown! I heard that there will be world peace when this thing is done counting.*/
+	.countdown {
+		max-width: 410px;
+		width: 39%;
+		margin-left: 65px;
+		float: right;
+		position: relative;
+	}
+		.count {
+			font-family: 'DigitaldreamFatRegular';
+			color: #F5EB00;
+			text-shadow: 6px 8px 0px #000000;
+			font-size: 140px;
+			height: 329px;
+			line-height: 329px;
+			max-width: 386px;
+			width: 100%;
+			margin: auto;
+			margin-bottom: 80px;
+			text-align: center;
+			background: url("images/timer.png") no-repeat;
+			background-size: 100% 100%;
+		}
+			.done {
+				/*when the countdown is done, start the animation. Animation shakes the timer for 10 seconds.*/
+				-moz-animation: DONE 100ms 100 alternate linear;
+				-webkit-animation: DONE 100ms 100 alternate linear;
+				-ms-animation: DONE 100ms 100 alternate linear;
+			}
+		.countdown p {
+			color: white;
+			text-shadow: 4px 4px 1px rgba(15,40,48, 0.4);
+			font-family: 'KomikaTitlePaint';
+			font-size: 44px;
+			text-align: center;
+			line-height: 50px;
+			max-width: 250px;
+			width: 100%;
+			margin: auto;
+		}		
+		/*countdown shake animation*/
+		@-webkit-keyframes DONE {
+			0%, 100% {-webkit-transform: translateX(0);}
+			10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px) rotate(-5deg);}
+			20%, 40%, 60%, 80% {-webkit-transform: translateX(10px) rotate(7deg);}
+		}
+		@-moz-keyframes DONE {
+			0%, 100% {-moz-transform: translateX(0);}
+			10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-10px) rotate(-5deg);}
+			20%, 40%, 60%, 80% {-moz-transform: translateX(10px) rotate(7deg);}
+		}
+		/*someday this will work, someday... (Not even IE10 supports it)*/
+		@-ms-keyframes DONE {
+			0%, 100% {-ms-transform: translateX(0);}
+			10%, 30%, 50%, 70%, 90% {-ms-transform: translateX(-10px) rotate(2deg);}
+			20%, 40%, 60%, 80% {-ms-transform: translateX(10px) rotate(7deg);}
+		}
+		@-o-keyframes DONE {
+			0%, 100% {-o-transform: translateX(0);}
+			10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-10px) rotate(-5deg);}
+			20%, 40%, 60%, 80% {-o-transform: translateX(10px) rotate(7deg);}
+		}
+		@keyframes DONE {
+			0%, 100% {transform: translateX(0);}
+			10%, 30%, 50%, 70%, 90% {transform: translateX(-10px) rotate(-5deg);}
+			20%, 40%, 60%, 80% {transform: translateX(10px) rotate(7deg);}
+		}
+
+/*footer time!*/
+footer {
+	text-align: center;
+	font-family: 'OpenSansRegular';
+	color: white;
+	padding-top: 0;
+}
+	/*image replacement, basic stuff here*/
+	.kn-logo {
+		width: 134px;
+		height: 85px;
+		margin: auto;
+		text-indent: -9999px;
+		background: url("images/kn-logo.png") no-repeat;
+		margin-bottom: 20px;
+	}
+		.kn-title {
+			font-size: 22px;
+			margin-bottom: 16px;
+		}
+		/*create the border things*/
+		footer:before, footer:after {
+			content: "";
+			width: 64%;
+			height: 8px;
+			position: absolute;
+			left: 18%;
+			background-color: black;
+			opacity: 0.06;
+			/*works?*/
+			filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+			z-index: 90;
+			margin: auto;
+		}
+		footer:before {
+			top: 36px;			
+		}
+		footer:after {
+			top: 65%;
+		}
+	/*no extra markup, create the columns with CSS3 columns. One bad thing is that I can't get the text to align left or right depending upon which column it is in*/	
+	.fineprint, .address {
+		-moz-column-count: 2;
+		-moz-column-gap: 28px;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 28px;
+		column-count: 2;
+		column-gap: 28px;
+		font-size: 15px;
+		margin: auto;
+		/*best solution to match the design without extra markup? I think so*/
+	}
+	.fineprint {
+		width: 575px;
+		text-align: justify;		
+	}
+	.visit {
+		margin-top: 35px;
+		font-size: 22px;
+		font-weight: normal;
+	}
+	.address {
+		width: 385px;
+		height: 50px;
+		margin-bottom: 60px;
+	}
+	/*set a BG image*/
+	.license-fineprint {
+		font-size: 15px;
+		background: url("images/cc.png") no-repeat;
+		height: 70px;
+		width: 720px;
+		margin: auto;
+		display: block;
+	}
+	
+/*universal styles for smaller screens (iPad, iPhone, everything in between)*/
+@media only screen and (min-width : 320px) and (max-width : 1024px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+	section, footer {
+		padding-left: 2%;
+		padding-right: 2%;
+		width: 96%;
+	}
+	header p {
+		padding-bottom: 20px;
+	}
+	nav {
+		position: static;
+		margin-bottom: 0px;
+	}
+		nav ul {
+			width: auto;
+			height: auto;
+		}
+		nav li {
+			float: none;
+			margin: 0;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		/*no reason to have "back to top" if the nav isn't attached to the top of the page*/
+		nav a[href="#top"] {
+			display: none;
+		}
+}	
+/*getting smaller (iPad/Tablet)*/
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	header h1 {
+		height: 480px;
+		background-position: 0px -50px;
+	}
+	.obstacle-list {
+		width: 20%;
+		margin: auto;
+	}
+	.obstacle-description {
+		margin-right: 10%;
+	}
+		.obstacle-list li {
+			width: 190px;
+			margin: auto !important;
+			margin-bottom: 20px !important;
+		}
+		.obstacle-list .the-tank {background-position: -20px -10px;}.obstacle-list .sundae-slide {background-position: -260px -10px;}.obstacle-list .human-hamster-wheel {background-position: -500px -10px;}.obstacle-list .down-the-hatch {background-position: -740px -10px;}.obstacle-list .pick-it {background-position: -980px -10px;;}.obstacle-list .the-wringer {background-position: -1220px -10px;}
+		.obstacle-list a {
+			width: 190px;
+		}		
+	/*adjust the width of the footer border thingys*/
+	footer:after, footer:before {
+		width: 90%;
+		left: 5%;
+	}
+
+}
+/*media query to handle the smallest screens (iPhone and beyond!)*/
+@media only screen and (min-width : 320px) and (max-width : 767px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+	/*brute force styling*/
+	header, #be-a-contestant form, .obstacle-list, .obstacle-description, #prizes li , .countdown, .count, .countdown p, .fineprint, .visit, .address, .license-fineprint {
+		margin: auto;
+		float: none;	
+		width: 100%;
+		height: auto;
+		position: static;
+	}
+	#obstacles .section-head, #prizes .section-head, #be-a-contestant .section-head {
+		margin-left: 0;
+		text-indent: 0;
+		width: 100%;
+		background: none;
+		text-align: center;
+		font-size: 32px;
+	}
+	header h1 {
+		width: 320px;
+		height: 348px;
+		background-size: 320px 348px;
+		margin: auto;
+	}
+	header h2 {
+		font-size: 32px;
+	}
+	header p {
+		font-size: 18px;
+	}		
+	.obstacle-list {
+		width: 220px;
+		margin: auto;
+	}
+	.obstacle-description div {
+		background-size: 100% 86%;
+	}	
+		.obstacle-description #human-hamster-wheel {
+			background-size: 96% 90%;
+		}
+	/*prizes adjustments*/
+	#prizes li, #prizes li:nth-child(2n) {
+		/*reason !important is used is for whatever reason it won't override, it should but I don't know why it doesn't*/
+		margin-bottom: 40px !important;
+		margin-top: 0 !important;
+		margin-right: auto;
+		margin-left: auto;
+		background-size: 100% 88% !important;
+		text-align: center;
+	}	
+	#be-a-contestant form{
+		width: 90%;
+		margin: auto;
+	}
+	#be-a-contestant input[type=text],#be-a-contestant input[type=email],#be-a-contestant input[type=url], #be-a-contestant select, #be-a-contestant input[type="text"]:focus, #be-a-contestant input[type="email"]:focus, #be-a-contestant input[type="url"]:focus, #be-a-contestant select:focus {
+		padding: 0px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		margin-right: 0px !important;
+		width: 100% !important;
+	}
+		/*rotation will cause issues on smaller screens*/	
+		#be-a-contestant input[type=submit] {
+			-moz-transform: rotate(0deg);
+			-webkit-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			transform: rotate(0deg);	
+		}		
+	.countdown {
+		margin-top: 60px;
+	}
+		.count {
+			margin-bottom: 40px;
+		}
+		.count, .countdown p {
+			background-size: 100% 100%;
+		}	
+	/*footer adjustments*/
+	.fineprint, .license-fineprint {
+		background: none;
+		margin-bottom: 20px;
+	}
+	.address {
+		margin-bottom: 40px;
+	}
+	
+	footer:after, footer:before {
+		width: 98%;
+		left: 1%;
+	}
+		footer:after {
+			top: 68%;
+		}
+}
+/*THE END. By the way, the meaning of life is 42. There, my stylesheet accomplished something meaningful for humanity.*/
