@@ -205,7 +205,7 @@ header {
 	text-shadow: 4px 4px 1px rgba(15,40,48, 0.4);
 }
 	/*my hax, BUT much more maintainable then using a seperate image for each header*/
-	#obstacles .section-head	{background-position: 310px 4px;}
+	#obstacles .section-head	{ margin-left: 310px; text-indent: -310px;}
 	#prizes .section-head {margin-left: 223px;text-indent: -223px;}
 	#be-a-contestant .section-head {margin-left: 500px;text-indent: -500px;}
 
