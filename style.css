@@ -10,7 +10,8 @@
          url('fonts/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-}@font-face {
+}
+@font-face {
     font-family: 'OpenSansSemibold';
     src: url('fonts/open-sans/OpenSans-Semibold-webfont.eot');
     src: url('fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -19,7 +20,8 @@
          url('fonts/open-sans/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
     font-weight: normal;
     font-style: normal;
-}@font-face {
+}
+@font-face {
     font-family: 'KomikaTitlePaint';
     src: url('fonts/komika-title/komikatitle-paint-webfont.eot');
     src: url('fonts/komika-title/komikatitle-paint-webfont.eot?#iefix') format('embedded-opentype'),
@@ -28,7 +30,8 @@
          url('fonts/komika-title/komikatitle-paint-webfont.svg#fonts/komika-title/komikatitle-PaintRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-}@font-face {
+}
+@font-face {
     font-family: 'DigitaldreamFatRegular';
     src: url('fonts/digital-dream/digitaldreamfat-webfont.eot');
     src: url('fonts/digital-dream/digitaldreamfat-webfont.eot?#iefix') format('embedded-opentype'),
@@ -153,7 +156,7 @@ header {
 					padding-left: 8px;
 					padding-right: 8px;
 				}
-	/*just some fancy image replacement*/			
+	/*just some fancy image replacement*/
 	header h1 {
 		height: 530px;
 		width: 502px;
@@ -197,7 +200,7 @@ header {
 	display: block;
 	background-image: url('images/checker-stripe-bg.png');
 	background-repeat: repeat-x;
-	
+
 	margin-bottom: 55px;
 	text-shadow: 4px 4px 1px rgba(15,40,48, 0.4);
 }
@@ -241,7 +244,7 @@ header {
 				background-image: url('images/obstacles/pick-it-large.png');
 			}.obstacle-description #the-wringer {
 				background-image: url('images/obstacles/the-wringer-large.png');
-			}		
+			}
 		/*basic styling for the header and description of each obstacle. Tilts them too.*/
 		.obstacle-description h2, .obstacle-description  p {
 			font-family: 'KomikaTitlePaint';
@@ -252,7 +255,7 @@ header {
 			-webkit-transform: rotate(-4deg);
 			-o-transform: rotate(-4deg);
 			-ms-transform: rotate(-4deg);
-			transform: rotate(-4deg);			
+			transform: rotate(-4deg);
 		}.obstacle-description  p {
 			font-size: 18px;
 			line-height: 22px;
@@ -262,8 +265,8 @@ header {
 			line-height: 40px;
 			margin-bottom: 10px;
 		}
-			#the-wringer h2, #sundae-slide h2, #down-the-hatch h2 {/*slight adjustment*/ padding-top: 90px;}	
-			
+			#the-wringer h2, #sundae-slide h2, #down-the-hatch h2 {/*slight adjustment*/ padding-top: 90px;}
+
 			/*create the green splatter background with no container divs, in theory this is a good idea because now I can position the background anywhere I want in any browser, except IE7 :(*/
 			.obstacle-description div:before {
 				background: url('images/obstacles/green-splatter-bg.png') no-repeat;
@@ -274,7 +277,7 @@ header {
 				top: 35px;
 				left: 50%;
 				margin-left: -120px;
-			}			
+			}
 	.obstacle-list li {
 		float: left;
 		background-color: #80B238;
@@ -283,7 +286,7 @@ header {
 		text-align: center;
 		-webkit-border-radius: 6px;
 		-moz-border-radius: 6px;
-		border-radius: 6px; 
+		border-radius: 6px;
 		background-repeat: no-repeat;
 		-webkit-transition: all 400ms ease-in-out;
 		-moz-transition: all 400ms ease-in-out;
@@ -307,15 +310,15 @@ header {
 			-moz-transition: all 400ms ease-in-out;
 			-o-transition: all 400ms ease-in-out;
 			transition: all 400ms ease-in-out;
-		}		
+		}
 		/*specify background position*/
 		.obstacle-list .the-tank {background-position: -10px -10px;}.obstacle-list .sundae-slide {background-position: -250px -10px;}.obstacle-list .human-hamster-wheel {background-position: -490px -10px;}.obstacle-list .down-the-hatch {background-position: -730px -10px;}.obstacle-list .pick-it {background-position: -970px -10px;;}.obstacle-list .the-wringer {background-position: -1210px -10px;}
-		
+
 		/*hover and current bg color*/
 		.obstacle-list li:hover, .obstacle-list .current {background-color:#EEF13F;}
 			.obstacle-list li:hover a, .obstacle-list .current a {color:#F46034;}
 
-/*on to the prizes section!*/			
+/*on to the prizes section!*/
 #prizes {
 	padding-bottom: 75px;
 }
@@ -358,8 +361,8 @@ header {
 			padding-top: 385px;
 			margin-top: -135px;
 		}
-		
-	/*sign up to be squashed by giant waffles, thrown by Chuck Norris. Who wouldn't want to sign up?!?*/	
+
+	/*sign up to be squashed by giant waffles, thrown by Chuck Norris. Who wouldn't want to sign up?!?*/
 	#be-a-contestant form {
 		max-width: 410px;
 		width: 42%;
@@ -373,7 +376,7 @@ header {
 			border: none;
 			-webkit-border-radius: 6px;
 			-moz-border-radius: 6px;
-			border-radius: 6px; 
+			border-radius: 6px;
 			padding: 15px;
 			margin-bottom: 12px;
 			font-family: 'KomikaTitlePaint';
@@ -383,7 +386,7 @@ header {
 			-o-transition: all 400ms ease-in-out;
 			transition: all 400ms ease-in-out;
 			position: relative;
-		}		
+		}
 			/*getting specific*/
 			#be-a-contestant input[type=text],#be-a-contestant input[type=email],#be-a-contestant input[type=url]{
 				width: 93%;
@@ -402,7 +405,7 @@ header {
 				}
 			#be-a-contestant select[name=team-color] {width: 220px;margin-right:20px;}
 			#be-a-contestant select[name=gender] {width: 166px;}
-			/*I did not achieve the green dropdown buttons. I decided that I could not do it in every browser without non-semantic elements (and it might get really complicated then)*/		
+			/*I did not achieve the green dropdown buttons. I decided that I could not do it in every browser without non-semantic elements (and it might get really complicated then)*/
 		/*submit button*/
 		#be-a-contestant input[type=submit] {
 			display: block;
@@ -417,14 +420,14 @@ header {
 			color: white;
 			font-size: 26px;
 			letter-spacing: 2px;
-			text-shadow: 4px 4px 1px rgba(15,40,48, 0.4);			
+			text-shadow: 4px 4px 1px rgba(15,40,48, 0.4);
 			-moz-transform: rotate(-8deg);
 			-webkit-transform: rotate(-8deg);
 			-o-transform: rotate(-8deg);
 			-ms-transform: rotate(-8deg);
-			transform: rotate(-8deg);				
+			transform: rotate(-8deg);
 		}
-		
+
 	/*oh yeah countdown! I heard that there will be world peace when this thing is done counting.*/
 	.countdown {
 		max-width: 410px;
@@ -464,7 +467,7 @@ header {
 			max-width: 250px;
 			width: 100%;
 			margin: auto;
-		}		
+		}
 		/*countdown shake animation*/
 		@-webkit-keyframes DONE {
 			0%, 100% {-webkit-transform: translateX(0);}
@@ -528,12 +531,12 @@ footer {
 			margin: auto;
 		}
 		footer:before {
-			top: 36px;			
+			top: 36px;
 		}
 		footer:after {
 			top: 65%;
 		}
-	/*no extra markup, create the columns with CSS3 columns. One bad thing is that I can't get the text to align left or right depending upon which column it is in*/	
+	/*no extra markup, create the columns with CSS3 columns. One bad thing is that I can't get the text to align left or right depending upon which column it is in*/
 	.fineprint, .address {
 		-moz-column-count: 2;
 		-moz-column-gap: 28px;
@@ -547,7 +550,7 @@ footer {
 	}
 	.fineprint {
 		width: 575px;
-		text-align: justify;		
+		text-align: justify;
 	}
 	.visit {
 		margin-top: 35px;
@@ -568,7 +571,7 @@ footer {
 		margin: auto;
 		display: block;
 	}
-	
+
 /*universal styles for smaller screens (iPad, iPhone, everything in between)*/
 @media only screen and (min-width : 320px) and (max-width : 1024px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 	section, footer {
@@ -597,7 +600,7 @@ footer {
 		nav a[href="#top"] {
 			display: none;
 		}
-}	
+}
 /*getting smaller (iPad/Tablet)*/
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
 	header h1 {
@@ -619,7 +622,7 @@ footer {
 		.obstacle-list .the-tank {background-position: -20px -10px;}.obstacle-list .sundae-slide {background-position: -260px -10px;}.obstacle-list .human-hamster-wheel {background-position: -500px -10px;}.obstacle-list .down-the-hatch {background-position: -740px -10px;}.obstacle-list .pick-it {background-position: -980px -10px;;}.obstacle-list .the-wringer {background-position: -1220px -10px;}
 		.obstacle-list a {
 			width: 190px;
-		}		
+		}
 	/*adjust the width of the footer border thingys*/
 	footer:after, footer:before {
 		width: 90%;
@@ -632,7 +635,7 @@ footer {
 	/*brute force styling*/
 	header, #be-a-contestant form, .obstacle-list, .obstacle-description, #prizes li , .countdown, .count, .countdown p, .fineprint, .visit, .address, .license-fineprint {
 		margin: auto;
-		float: none;	
+		float: none;
 		width: 100%;
 		height: auto;
 		position: static;
@@ -656,14 +659,14 @@ footer {
 	}
 	header p {
 		font-size: 18px;
-	}		
+	}
 	.obstacle-list {
 		width: 220px;
 		margin: auto;
 	}
 	.obstacle-description div {
 		background-size: 100% 86%;
-	}	
+	}
 		.obstacle-description #human-hamster-wheel {
 			background-size: 96% 90%;
 		}
@@ -676,7 +679,7 @@ footer {
 		margin-left: auto;
 		background-size: 100% 88% !important;
 		text-align: center;
-	}	
+	}
 	#be-a-contestant form{
 		width: 90%;
 		margin: auto;
@@ -688,14 +691,14 @@ footer {
 		margin-right: 0px !important;
 		width: 100% !important;
 	}
-		/*rotation will cause issues on smaller screens*/	
+		/*rotation will cause issues on smaller screens*/
 		#be-a-contestant input[type=submit] {
 			-moz-transform: rotate(0deg);
 			-webkit-transform: rotate(0deg);
 			-o-transform: rotate(0deg);
 			-ms-transform: rotate(0deg);
-			transform: rotate(0deg);	
-		}		
+			transform: rotate(0deg);
+		}
 	.countdown {
 		margin-top: 60px;
 	}
@@ -704,7 +707,7 @@ footer {
 		}
 		.count, .countdown p {
 			background-size: 100% 100%;
-		}	
+		}
 	/*footer adjustments*/
 	.fineprint, .license-fineprint {
 		background: none;
@@ -713,7 +716,7 @@ footer {
 	.address {
 		margin-bottom: 40px;
 	}
-	
+
 	footer:after, footer:before {
 		width: 98%;
 		left: 1%;
