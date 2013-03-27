@@ -1,14 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Triple Dare - Knuckleodeon</title>  
+		<title>Triple Dare - Knuckleodeon</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 		<link rel="stylesheet" href="style.css" media="all" />
 		<!--iPhone viewport settings-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-39603531-1', 'bradleyrosenfeld.com');
+		  ga('send', 'pageview');
+
+		</script>
 		<!--simple script, enables the HTML5 elements that I use in IE8 and below, also some styling fixes-->
-		<!--[if lt IE 9]>	
+		<!--[if lt IE 9]>
 			<script>
 				document.createElement("header"); document.createElement("nav"); document.createElement("section"); document.createElement("footer");
 			</script>
@@ -19,7 +28,7 @@
 				#be-a-contestant .section-head {margin-left: 525px;text-indent: -525px;}
 			</style>
 		<![endif]-->
-		<!--[if IE 6]>	
+		<!--[if IE 6]>
 			<style>
 				body {background: #80c1d6;}
 				.orange-bg {background: #fe6638;}
@@ -39,15 +48,15 @@
 					<li><a href="#top">Back to Top</a></li>
 				</ul>
 			</nav>
-				
+
 			<h1>Triple Dare</h1>
 			<h2 title="Now with 20% more Chuck Norris!">The Web's messiest challenge!</h2>
 			<p>Airing Thursdays on the Knuckleodeon Network&#8482;</p>
 		</header>
-			
+
 		<section id="obstacles" class="orange-bg clearfix">
 			<h2 class="section-head">Obstacles</h2>
-				
+
 			<ul class="obstacle-list clearfix">
 				<li class="the-tank current"><a href="#the-tank">The Tank</a></li>
 				<li class="sundae-slide"><a href="#sundae-slide">Sundae Slide</a></li>
@@ -56,7 +65,7 @@
 				<li class="pick-it"><a href="#pick-it">Pick It!</a></li>
 				<li class="the-wringer"><a href="#the-wringer">The Wringer</a></li>
 			</ul>
-				
+
 			<div class="obstacle-description clearfix">
 				<div id="the-tank" class="current">
 					<h2>The Tank</h2>
@@ -81,20 +90,20 @@
 				<div id="the-wringer">
 					<h2>The Wringer</h2>
 					<p>Just don't look at it...</p>
-				</div>					
-			</div>				
+				</div>
+			</div>
 		</section>
-			
+
 		<section id="prizes" class="green-bg clearfix">
 			<h2 class="section-head">Prizes</h2>
 			<ul class="clearfix">
 				<li class="space-camp">A Trip to Space Camp!</li>
 				<li class="skateboard">A Nash Skateboard!</li>
 				<li class="keyboard">A Casio Rapman Keyboard!</li>
-				<li class="tv-vcr-combo">A 13 inch TV/VCR Combo!</li>					
+				<li class="tv-vcr-combo">A 13 inch TV/VCR Combo!</li>
 			</ul>
 		</section>
-			
+
 		<section id="be-a-contestant" class="blue-bg clearfix">
 			<h2 class="section-head">Be A Contestant</h2>
 			<form method="post" action="form-handler.fancyfileextension">
@@ -117,36 +126,36 @@
 				<input type="url" placeholder="Profile Photo URL" name="profile-photo-url" required>
 				<input type="submit" value="Submit Entry!">
 			</form>
-				
+
 			<div class="countdown">
 				<h2 class="count">60</h2>
 				<p>The clock is ticking!</p>
 			</div>
-		</section>		
+		</section>
 
 		<footer>
 			<h2 class="kn-logo">KN</h2>
 			<p class="kn-title">The Knucklelodeon Network</p>
-					
+
 			<p class="fineprint">
 				The Knucklelodeon Network is not affiliated with Nickelodeon, nor is it an actual television network.
 				Triple Dare contestents consent to potential physical bodily harm, like being burried alive by a giant waffle.
 			</p>
-			
+
 			<h2 class="visit">Visit Our Studios</h2>
 			<p class="address">
 				11 Slime Time Way Sacrameno, CA 94203 329 Grunk Road Jacksonville, FL 32099
 			</p>
-					
+
 			<p class="license-fineprint">
 				This design is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License
 			</p>
-				
-		</footer>				
+
+		</footer>
 		<!--javascript-->
 		<script src="js/jquery-1.6.4.min.js"></script>
-		<script src="js/script.js"></script>		
-		
+		<script src="js/script.js"></script>
+
 		<!--adds support for placeholder text in IE (not even IE10 supports placeholder!)-->
 		<!--[if IE]>
 		<script>
@@ -158,7 +167,7 @@
 				$(this).val(text);
 				$(this).bind('blur', function(){ $(this).val(text); });
 				$(this).bind('focus', function(){ $(this).val(""); });
-			});		
+			});
 			$('textarea[placeholder]').each(function () {
 				//create a var with the text equaling the placeholder attribute
 				var text = $(this).attr("placeholder");
@@ -166,7 +175,7 @@
 				$(this).val(text);
 				$(this).bind('blur', function(){ $(this).val(text); });
 				$(this).bind('focus', function(){ $(this).val(""); });
-			});			
+			});
 		</script>
 		<![endif]-->
 	</body>
